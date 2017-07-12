@@ -929,7 +929,7 @@ bgpq3_print_ciscoxr_prefixlist(FILE* f, struct bgpq_expander* b)
 int
 bgpq3_print_json_prefixlist(FILE* f, struct bgpq_expander* b)
 {
-        fprintf(f,"{ \"PrefixName\": \"%s\",\n \"PrefixFilters\": [",
+        fprintf(f,"{ \"PrefixName\": \"%s\",\n  \"PrefixFilters\": [",
                 b->name?b->name:"NN");
 	sx_radix_tree_foreach(b->tree,bgpq3_print_json_prefix,f);
 	fprintf(f,"\n] }\n");
